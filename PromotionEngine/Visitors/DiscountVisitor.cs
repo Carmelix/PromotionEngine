@@ -36,7 +36,7 @@ namespace PromotionEngine
 
             discount += (nA / 3) * 20;                  // 3 of A's for 130
             discount += (nB / 2) * 15;                  // 2 of B's for 45
-            discount += ((int)Math.Sqrt(nC * nD)) * 5;  // C & D for 30
+            discount += Math.Min(nC, nD) * 5;           // C & D for 30
 
             return discount;    
         }
